@@ -1,4 +1,6 @@
 bricks:
+  bloc:
+    path: bricks/bloc
   model:
     path: bricks/model
   repo:
