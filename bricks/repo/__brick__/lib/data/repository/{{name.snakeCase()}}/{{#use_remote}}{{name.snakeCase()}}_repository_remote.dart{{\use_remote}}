@@ -1,0 +1,18 @@
+import 'package:injectable/injectable.dart';
+
+@LazySingleton(as: {{name.pascalCase()}}Repository)
+class {{name.pascalCase()}}RepositoryRemote extends {{name.pascalCase()}}Repository {
+  const {{name.pascalCase()}}RepositoryRemote(this._network);
+
+  final BaseNetwork _network;
+
+  @override
+  {{#use_single}}{{> return_single }}{{/use_single}}{{#use_list}}{{> return_list }}{{/use_list}}{{#use_none}}{{> return_none }}{{/use_none}} async {
+    try {
+      // TODO: add your path url
+      return await _network.get('', parser: (resp) => {{name.pascalCase()}}.fromJson(resp));
+    } catch (_) {
+      rethrow;
+    }
+  }
+}
