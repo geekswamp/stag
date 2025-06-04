@@ -1,0 +1,1 @@
+Future<{{name.pascalCase()}}> fetch()

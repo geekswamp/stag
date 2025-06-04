@@ -1,0 +1,31 @@
+name: repo
+description: A new brick created with the Mason CLI.
+version: 0.1.0+1
+
+environment:
+  mason: ^0.1.1
+
+vars:
+  name:
+    type: string
+    description: Your repository name
+    prompt: What is your repository name?
+
+  repo_tye:
+    type: enum
+    default: remote
+    description: Your repository type
+    prompt: Select your repository type
+    values:
+      - remote
+      - local
+
+  return_type:
+    type: enum
+    default: single
+    description: Your return repository type
+    prompt: Select your return type of repository
+    values:
+      - single
+      - list
+      - none

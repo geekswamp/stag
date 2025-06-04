@@ -1,3 +1,7 @@
 bricks:
   model:
     path: bricks/model
+  repo:
+    path: bricks/repo
+  use_case:
+    path: bricks/use_case
