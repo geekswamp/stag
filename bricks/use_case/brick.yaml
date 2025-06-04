@@ -1,0 +1,22 @@
+name: use_case
+description: A new brick created with the Mason CLI.
+version: 0.1.0+1
+
+environment:
+  mason: ^0.1.1
+
+vars:
+  name:
+    type: string
+    description: Your usecase name
+    prompt: What is your usecase name?
+
+  return_type:
+    type: enum
+    default: single
+    description: Your return usecase type
+    prompt: Select your return type of usecase
+    values:
+      - single
+      - list
+      - none

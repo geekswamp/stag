@@ -1,0 +1,1 @@
+class {{name.pascalCase()}}FetchUseCase extends UseCase<List<{{name.pascalCase}}>, void>

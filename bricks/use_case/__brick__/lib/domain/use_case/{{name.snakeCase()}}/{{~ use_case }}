@@ -1,0 +1,11 @@
+@injectable
+{{#use_single}}{{> return_single }}{{/use_single}}{{#use_list}}{{> return_list }}{{/use_list}}{{#use_none}}{{> return_none }}{{/use_none}} {
+    const {{name.pascalCase()}}FetchUseCase(this._repository);
+
+    final {{name.pascalCase()}}Repository _repository;
+
+    @override
+    Future<{{name.pascalCase()}}> call(void params) {
+        return _repository.fetch(params);
+    }
+}
